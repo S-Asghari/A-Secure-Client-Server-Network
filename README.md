@@ -20,6 +20,7 @@ In this project, "socket" and "cryptography" libraries have been used.
 This method is somewhat similar to the above method (creating and transfering public keys, private keys and a session key). 
 
 1. Before transfering data, each client should be authenticated to the server (The server should be authenticated to each client too). For this purpose, the following algorithm is implemented:
+
 ![alt text](https://user-images.githubusercontent.com/42779113/97398045-c376c500-18ff-11eb-97e8-cffd0720e79f.png)
 
 ### Note:
