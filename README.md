@@ -12,7 +12,7 @@ In this project, "socket" and "cryptography" libraries have been used.
 
 4. The user decides whether to send a message or a file over the network.
 
-5. If the user chooses to transfer a file, they will be asked for a file address (for example C:/Users/user/Desktop/book.**jpg**). 
+5. If the user chooses to transfer a file, they will be asked for a file address (for example C:/Users/user/Desktop/book.**jpg**). The file will then be transfered bit by bit. There's also a session key expire time (5 seconds) that is particularly used for transfering large files. If transfering a file does not finish before this period, the session will get exprired and a new session key will be created. 
 
 
 
