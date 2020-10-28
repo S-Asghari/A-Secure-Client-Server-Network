@@ -14,7 +14,7 @@ In this project, "socket" and "cryptography" libraries have been used.
 
 5. If the user chooses to transfer a file, they will be asked for a file address (for example C:/Users/user/Desktop/book.**jpg**). The file will then be transfered bit by bit. There's also a session key expire time (5 seconds) that is particularly used for transfering large files. If transfering a file does not finish before this period, the session will get exprired and a new session key will be created. 
 
-
+6. After finishing the msg / file transfer, a new master key will be created and transfered for next connections between the same sender and the same receiver. 
 
 ## Asymmetric Encryption:
 
