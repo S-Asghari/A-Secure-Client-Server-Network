@@ -12,13 +12,14 @@ In this project, "socket" and "cryptography" libraries have been used.
 
 4. The user decides whether to send a message or a file over the network.
 
-5. If the user chooses to transfer a file, they will be asked for a file address (for example C:/Users/user/Desktop/book.**jpg**). The file will then be transfered bit by bit. There's also a session key expire time (5 seconds) that is particularly used for transfering large files. If transfering a file does not finish before this period, the session will get exprired and a new session key will be created. 
+5. If the user chooses to transfer a file, they will be asked for a file address (for example C:/Users/user/Desktop/book.**jpg**). The file will then be transfered byte by byte. There's also a session key expire time (5 seconds) that is particularly used for transfering large files. If transfering a file does not finish before this period, the session will get exprired and a new session key will be created. 
 
 6. After finishing the msg / file transfer, a new master key will be created and transfered for next connections between the same sender and the same receiver. 
 
 ## Asymmetric Encryption:
 This method is somewhat similar to the above method (creating and transfering public keys, private keys and a session key). 
-1. 
+
+1. Before transfering data, each client should be authenticated to the server (The server should be authenticated to each client too). For this purpose, the following algorithm is implemented:
 
 ### Note:
 - First run the server code and then run then client code as many times as you wish, because if you run the client code before the server code, there would be no server to bind to that client and the client terminates with a message saying: "Failed to connect to host: 127.0.0.1 on port: 9999, because: [WinError 10061] No connection could be made because the target machine actively refused it".
